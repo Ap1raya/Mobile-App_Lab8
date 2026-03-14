@@ -1,0 +1,55 @@
+# Lab8
+# LAB 8: Flutter Navigation & Routing
+
+Workshop นี้จัดทำขึ้นเพื่อสาธิตการใช้งาน **Navigation** ใน Flutter ตามเอกสาร Official Documentation โดยรวมตัวอย่างการใช้งาน 6 รูปแบบไว้ในแอปพลิเคชันเดียว
+
+## 📱 ภาพตัวอย่างแอปพลิเคชัน (Screenshots)
+
+| หน้าหลัก (Home Menu) | หน้าแสดงโค้ด (Code Preview) |
+| <img width="1096" height="1316" alt="image" src="https://github.com/user-attachments/assets/06f38373-9b55-4763-b065-2b069770d445" />
+ 
+
+---
+
+## 🚀 ฟีเจอร์ของแอปพลิเคชัน
+แอปพลิเคชันประกอบด้วยเมนูหลัก 6 หัวข้อ แต่ละหัวข้อเมื่อกดเข้าไปจะแสดงผล 2 Tab คือ **UI Preview** (หน้าจอใช้งานจริง) และ **Code Example** (ตัวอย่างโค้ด):
+
+### 1. Navigate to a new screen and back
+การเปลี่ยนหน้าพื้นฐานโดยใช้ `Navigator.push` และ `Navigator.pop`
+* **ตัวอย่าง:** กดปุ่มเพื่อไปหน้าสอง และกดปุ่มย้อนกลับ
+
+### 2. Send data to a new screen
+การส่งข้อมูล (String/Object) ไปยังหน้าถัดไปผ่าน Constructor
+* **ตัวอย่าง:** กดที่รายการ List แล้วส่งข้อความไปแสดงเป็นหัวข้อในหน้าถัดไป
+
+### 3. Return data from a screen
+การส่งข้อมูลย้อนกลับมาหน้าเดิมเมื่อปิดหน้าจอย่อย โดยใช้ `Navigator.pop(context, value)`
+* **ตัวอย่าง:** หน้าเลือกตัวเลือก (Yes/No) เมื่อกดแล้วจะส่งค่ากลับมาแสดงที่หน้าแรก
+
+### 4. Navigate with named routes
+การเปลี่ยนหน้าโดยใช้ชื่อ Route (String) ที่กำหนดไว้ใน `MaterialApp`
+* **ตัวอย่าง:** ใช้คำสั่ง `Navigator.pushNamed` แทนการสร้าง Route เอง
+
+### 5. Pass arguments to a named route
+การส่งข้อมูลไปยัง Named Route ผ่าน `arguments` property
+* **ตัวอย่าง:** ส่งข้อความ Title และ Message ไปยังหน้าปลายทางและดึงค่ามาแสดงผล
+
+### 6. Animate a widget across screens (Hero)
+การทำ Animation เชื่อมโยง Widget ระหว่างสองหน้าจอ
+* **ตัวอย่าง:** รูปภาพที่ขยายใหญ่ขึ้นเมื่อเปลี่ยนหน้าและย่อกลับเมื่อกด Back
+
+---
+
+## 🛠 การติดตั้งและรันโปรเจกต์
+1.  **Clone repository:**
+    ```bash
+    git clone <your-repo-url>
+    ```
+2.  **Get packages:**
+    ```bash
+    flutter pub get
+    ```
+3.  **Run app:**
+    ```bash
+    flutter run
+    ```
